@@ -38,8 +38,13 @@ However, SH1106 driver don't provide several functions such as scroll commands.
  typedef volatile RwReg PortReg;
  typedef uint32_t PortMask;
 #else
+  #ifdef ESP32
+  typedef volatile uint32_t PortReg;
+  typedef uint8_t PortMask;
+  #else
   typedef volatile uint8_t PortReg;
   typedef uint8_t PortMask;
+  #endif
 #endif
 
 #include <SPI.h>

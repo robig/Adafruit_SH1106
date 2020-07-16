@@ -1,6 +1,13 @@
 Adafruit_SH1106
 ===============
 
+Cloned https://github.com/wonho-maker/Adafruit_SH1106
+Made it compile/work for ESP32 boards. So I could switch from Adafruit_SSD1306 library directly to this without huge code changes.
+Beware that for some reason this SH1106 library is 4x slower than current SSD1306 library. Maybe its the SH1106 chip itself.
+
+Description
+===========
+
 Adafruit graphic library for SH1106 driver lcds.
 
 some small oled lcd use SH1106 driver.
